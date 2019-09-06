@@ -1,0 +1,45 @@
+{
+  "name": "eufemia-demo-rs",
+  "version": "1.0.0",
+  "description": "Eufemia Demos using React-Static",
+  "license": "SEE LICENSE IN LICENSE FILE",
+  "author": "DNB Team & Tobias Høegh",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dnbexperience/eufemia-demo-rs.git"
+  },
+  "private": true,
+  "scripts": {
+    "start": "react-static start",
+    "stage": "react-static build --staging",
+    "build": "react-static build",
+    "analyze": "react-static build --analyze",
+    "serve": "serve dist -p 3000"
+  },
+  "dependencies": {
+    "@emotion/core": "^10.0.17",
+    "@emotion/styled": "^10.0.17",
+    "@reach/router": "^1.2.1",
+    "classnames": "^2.2.6",
+    "css-vars-ponyfill": "^2.1.1",
+    "dnb-ui-lib": "^4.14.2",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "react-static": "^7.2.2",
+    "react-static-plugin-reach-router": "^7.2.2",
+    "react-static-plugin-sitemap": "^7.2.2",
+    "react-static-plugin-source-filesystem": "^7.2.2"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.3",
+    "eslint": "^6.3.0",
+    "eslint-config-react-app": "^5.0.1",
+    "eslint-config-react-tools": "^1.1.7",
+    "eslint-plugin-flowtype": "^4.3.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.14.3",
+    "eslint-plugin-react-hooks": "^2.0.1",
+    "serve": "^11.1.0"
+  }
+}
