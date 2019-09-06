@@ -2,7 +2,7 @@ import React from 'react'
 import { Root, Head, Routes, addPrefetchExcludes } from 'react-static'
 
 import { Router, Location, navigate } from '@reach/router'
-import Dynamic from 'containers/Dynamic'
+import Dynamic from './containers/Dynamic'
 
 // App layout wrapper
 import Preloader from './layout/Preloader'
