@@ -22,7 +22,7 @@
     "@reach/router": "^1.2.1",
     "classnames": "^2.2.6",
     "css-vars-ponyfill": "^2.1.1",
-    "dnb-ui-lib": "^4.14.2",
+    "dnb-ui-lib": "^4.14.3",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-static": "^7.2.2",
