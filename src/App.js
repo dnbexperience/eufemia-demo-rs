@@ -21,31 +21,26 @@ function App() {
       </Head>
       <Layout>
         <Location>
-          {({ location: { pathname } }) => {
-            console.log('locaiton', pathname)
-            return (
-              <Tabs
-                data={[
-                  { title: 'Home', key: 'home' },
-                  { title: 'Form #1', key: 'form-demo-01' },
-                  { title: 'Form #2', key: 'form-demo-02' },
-                  { title: 'Dynamic', key: 'dynamic' }
-                ]}
-                selected_key={pathname.replace(/^\//, '')}
-                on_change={({ key }) =>
-                  key === 'home' ? navigate('/') : navigate(key)
-                }
-                section_style="mint-green"
-              >
-                <React.Suspense fallback={<Preloader />}>
-                  <Router>
-                    <Dynamic path="dynamic" />
-                    <Routes path="*" />
-                  </Router>
-                </React.Suspense>
-              </Tabs>
-            )
-          }}
+          {({ location: { pathname } }) => (
+            <Tabs
+              data={[
+                { title: 'Home', key: '/' },
+                { title: 'Form #1', key: '/form-demo-01' },
+                { title: 'Form #2', key: '/form-demo-02' },
+                { title: 'Dynamic', key: '/dynamic' }
+              ]}
+              selected_key={pathname}
+              on_change={({ key }) => navigate(key)}
+              section_style="mint-green"
+            >
+              <React.Suspense fallback={<Preloader />}>
+                <Router>
+                  <Dynamic path="dynamic" />
+                  <Routes path="*" />
+                </Router>
+              </React.Suspense>
+            </Tabs>
+          )}
         </Location>
       </Layout>
     </Root>
