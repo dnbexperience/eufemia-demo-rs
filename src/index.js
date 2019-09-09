@@ -10,6 +10,8 @@ import 'dnb-ui-lib/style/basis'
 import 'dnb-ui-lib/style/components'
 import 'dnb-ui-lib/style/themes/ui'
 
+import EufemiaProvider from 'dnb-ui-lib/shared/Provider'
+
 // This polyfill is only needed if we use Styled Components (CSS-in-JS) syntax
 import cssVars from 'css-vars-ponyfill'
 cssVars()
@@ -28,7 +30,9 @@ if (typeof document !== 'undefined') {
   const render = Comp => {
     renderMethod(
       <AppContainer>
-        <Comp />
+        <EufemiaProvider formRow={{}}>
+          <Comp />
+        </EufemiaProvider>
       </AppContainer>,
       target
     )
